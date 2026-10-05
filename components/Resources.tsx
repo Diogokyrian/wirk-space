@@ -61,30 +61,31 @@ const resourcesData = [
 const Resources = () => {
   return (
     <section className="w-full bg-black py-16 px-4 md:px-8 relative overflow-hidden">
-      
-      <div className="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center overflow-hidden">
-        <div className="w-300 h-150 border-40 border-[#D3AB5E] rounded-full blur-3xl"></div>
-      </div>
+     
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-45 pointer-events-none"
+        style={{ backgroundImage: "url('/Rectangle 4250.png')" }}
+      ></div>
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
         
-        <h2 className="text-xl md:text-2xl font-bold text-[#D3AB5E] mb-10 tracking-tight text-center">
+        
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#D3AB5E] mb-12 tracking-tight text-center">
           Wirkspace resources
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {resourcesData.map((item, index) => (
             <div 
               key={index} 
-              className="bg-black border border-gray-800/80 rounded-xl p-6 flex flex-col justify-between hover:border-[#D3AB5E]/40 transition-all shadow-md min-h-50"
+              className="bg-black border border-gray-800/90 rounded-2xl p-6 flex flex-col justify-between hover:border-[#D3AB5E]/40 transition-all shadow-xl min-h-55"
             >
               <div>
-            
-                <div className="w-10 h-10 rounded-lg bg-[#D3AB5E]/10 flex items-center justify-center mb-4">
+              
+                <div className="w-12 h-12 rounded-full border border-[#D3AB5E]/30 bg-[#D3AB5E]/10 flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
 
-    
                 <h3 className="text-white font-bold text-base mb-2">
                   {item.title}
                 </h3>
@@ -94,7 +95,6 @@ const Resources = () => {
                 </p>
               </div>
 
-          
               <div className="mt-4 pt-3 border-t border-gray-800/40">
                 <Link href="#" className="text-[#D3AB5E] hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
                   View more <span className="text-xs">&gt;</span>
