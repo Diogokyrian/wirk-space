@@ -13,7 +13,7 @@ const featuresList = [
   {
     title: "Wirkspace Airdrops",
     description: "Claim rubies daily on wirkspace to access whitelist specs, convert to airtime and access to various benefits.",
-    imageSrc: "/WirkspaceAir.png",
+    imageSrc: "/Air.png",
     imageAlt: "Wirkspace Airdrops",
   },
   {
