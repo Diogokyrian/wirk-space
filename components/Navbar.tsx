@@ -45,7 +45,7 @@ const Navbar = () => {
    
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden w-10 h-10 rounded-xl bg-[#151c2c] border border-gray-800 flex items-center justify-center text-gray-300 hover:text-[#D3AB5E] transition-colors focus:outline-none"
+          className="md:hidden w-10 h-10 rounded-xl bg-[#151c2c] border border-gray-800 flex items-center justify-center text-[#D3AB5E] hover:text-[#D3AB5E] transition-colors focus:outline-none"
           aria-label="Toggle Menu"
         >
           {isOpen ? (
