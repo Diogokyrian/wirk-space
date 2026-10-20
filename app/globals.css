@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@layer theme, base, clerk, components, utilities;
+@import 'tailwindcss';
+
 
 :root {
   --background: #ffffff;
@@ -23,4 +25,275 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(ellipse at top, #e8edff 0%, transparent 50%),
+    #f7f8fc;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 36px;
+  background: #fff;
+  border: 1px solid #e7e9f0;
+  border-radius: 22px;
+  box-shadow: 0 20px 65px rgba(24, 35, 70, 0.09);
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #4f46e5;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.eyebrow {
+  margin: 26px 0 8px;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.8px;
+}
+
+.auth-subtitle {
+  color: #697386;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: 26px 0;
+  padding: 5px;
+  background: #f1f3f9;
+  border-radius: 11px;
+}
+
+.auth-tabs button {
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #667085;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-tabs button.active {
+  background: white;
+  color: #4338ca;
+  box-shadow: 0 1px 4px #dfe2eb;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-form label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #dfe3ed;
+  border-radius: 10px;
+  background: white;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px #6366f122;
+}
+
+.auth-submit {
+  margin-top: 16px;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background: #4338ca;
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.auth-error {
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  color: #697386;
+  text-align: center;
+  font-size: 13px;
+}
+
+.text-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #4f46e5;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 26px 21px;
+  }
+
+  .auth-card h1 {
+    font-size: 25px;
+  }
+}
+.workspace-page {
+  min-height: 100vh;
+  background: #f7f8fc;
+  color: #172033;
+}
+
+.workspace-header {
+  min-height: 72px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  border-bottom: 1px solid #e7e9f0;
+}
+
+.workspace-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.workspace-logo {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: #4f46e5;
+  color: white;
+}
+
+.logout-button {
+  padding: 10px 16px;
+  border: 1px solid #dfe3ed;
+  border-radius: 9px;
+  background: white;
+  color: #344054;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.workspace-content {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 65px 24px;
+}
+
+.workspace-content h1 {
+  margin: 8px 0;
+  font-size: clamp(28px, 5vw, 42px);
+  letter-spacing: -1.2px;
+}
+
+.workspace-description {
+  color: #697386;
+  line-height: 1.7;
+}
+
+.workspace-panel {
+  margin-top: 36px;
+  padding: 28px;
+  border: 1px solid #e7e9f0;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 30px #17203308;
+  overflow-wrap: anywhere;
+}
+
+.workspace-panel h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+.workspace-panel p {
+  color: #475467;
+  line-height: 1.8;
+}
+
+.account-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+@media (max-width: 480px) {
+  .workspace-header {
+    padding: 0 18px;
+  }
+
+  .workspace-content {
+    padding: 42px 18px;
+  }
+
+  .workspace-panel {
+    padding: 20px;
+  }
 }
