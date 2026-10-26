@@ -40,10 +40,10 @@ const Navbar = () => {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/login?mode=login" className="text-xs text-gray-300 hover:text-white transition-colors">
+          <Link href="/form" className="text-xs text-gray-300 hover:text-white transition-colors">
             Sign in
           </Link>
-          <Link href="/login?mode=signup" className="bg-[#D3AB5E] hover:bg-[#D3AB5E]/90 text-[#111622] font-bold text-xs px-5 py-2.5 rounded-full transition-colors">
+          <Link href="/form" className="bg-[#D3AB5E] hover:bg-[#D3AB5E]/90 text-[#111622] font-bold text-xs px-5 py-2.5 rounded-full transition-colors">
             Sign up
           </Link>
         </div>
@@ -79,10 +79,10 @@ const Navbar = () => {
           </nav>
 
           <div className="border-t border-gray-800 pt-4 flex flex-col gap-3">
-            <Link href="/login?mode=login" onClick={() => setIsOpen(false)} className="text-xs text-gray-300 hover:text-white py-1">
+            <Link href="/form" onClick={() => setIsOpen(false)} className="text-xs text-gray-300 hover:text-white py-1">
               Sign in
             </Link>
-            <Link href="/login?mode=signup" onClick={() => setIsOpen(false)} className="bg-[#D3AB5E] hover:bg-[#D3AB5E]/90 text-[#111622] font-bold text-xs py-3 rounded-full text-center transition-colors">
+            <Link href="/form" onClick={() => setIsOpen(false)} className="bg-[#D3AB5E] hover:bg-[#D3AB5E]/90 text-[#111622] font-bold text-xs py-3 rounded-full text-center transition-colors">
               Sign up
             </Link>
           </div>
